@@ -2,12 +2,12 @@ Three area in git project :
 
 Working copy >> Staging/indexing Area >> Local repository >> Remote Repository(Multiple)
 
-Git version 
+git version 
 
 Initialize a repository
 ------------------------
-Git init : initialized a new repo in the current dir
-Git init repo_name : initialized a new repo with new dir created
+git init : initialized a new repo in the current dir
+git init repo_name : initialized a new repo with new dir created
 
 cloning a repository
 ------------------------
@@ -15,13 +15,47 @@ git clone url : clone from remote repository and set upstream to remote branch
 
 Congifuration 
 ---------------
-Git config --system/global/BLANK(userlevel) --list : too see list
-Git config user.email value
-Git config --unset user.email : unset key
-Git config --edit
+git config --system/global/BLANK(userlevel) --list : too see list
+git config user.email value
+git config --unset user.email : unset key
+git config --edit
 
 Status
 --------------------------
-Git status : status of repo
+git status : status of repo
 
 If you update/delete/rename committed file then git will know it on git add
+
+Adding and commmiting 
+---------------------
+Add files in staging area(untracked file to tracked file) 
+
+git add filename : file added to staging area 
+git add -u : adds only all updated files(Already committed in repo but with new changes), not untracked files to repo  
+git add -A  : adds all files to repo( Updated files + untracked files)
+git add *.txt // only text files
+git add .
+
+Committing To local repository
+------------------------------
+Git commit (will generate sha1 hash)
+Git commit -m “msg” : commit with msg
+Git commit -am “msg” : commit all updated file with msg 
+
+Cleaning tracked and untracked files 
+-------------------------------------
+Git checkout filename : to revert changes made to a tracked file 
+
+Git reset --hard : if multiple tracked files are updated and you want to revert it, changes are not added to staging 
+Git reset --hard Head~1 : reverts last commit 
+
+Git reset --soft Head~1 : reverts last commit and those changes are added to staging area 
+
+Git clean : If you have stray files in your working copy to remove it
+Git clean -n : what will it do 
+Git clean -f : forcefully remove untracked files 
+
+
+
+Git show head : show the last commit 
+Git show sha1 
