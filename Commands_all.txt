@@ -1,2 +1,15 @@
 Git version 
-git init repositoryName
+
+Initialize a repository
+------------------------
+git init repositoryName : 
+git init or in the repository dir
+
+cloning a repository
+------------------------
+git clone url : clone from remote repository and set upstream to remote branch
+
+Congifuration 
+---------------
+git config --system/global/BLANK(User level) --list
+ 
