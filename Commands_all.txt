@@ -55,7 +55,12 @@ Git clean : If you have stray files in your working copy to remove it
 Git clean -n : what will it do 
 Git clean -f : forcefully remove untracked files 
 
+Remove a commit 
+---------------
+Git revert sha1hash
 
 
 Git show head : show the last commit 
 Git show sha1 
+
+
