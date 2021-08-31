@@ -1,9 +1,13 @@
+Three area in git project : 
+
+Working copy >> Staging/indexing Area >> Local repository >> Remote Repository(Multiple)
+
 Git version 
 
 Initialize a repository
 ------------------------
-git init repositoryName : 
-git init or in the repository dir
+Git init : initialized a new repo in the current dir
+Git init repo_name : initialized a new repo with new dir created
 
 cloning a repository
 ------------------------
@@ -11,5 +15,13 @@ git clone url : clone from remote repository and set upstream to remote branch
 
 Congifuration 
 ---------------
-git config --system/global/BLANK(User level) --list
- 
+Git config --system/global/BLANK(userlevel) --list : too see list
+Git config user.email value
+Git config --unset user.email : unset key
+Git config --edit
+
+Status
+--------------------------
+Git status : status of repo
+
+If you update/delete/rename committed file then git will know it on git add
